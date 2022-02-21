@@ -2,19 +2,19 @@ package oop;
 
 public class Rectangle {
 
-    private final int width;
-    private final int length;
+  private int height;
+  private int width;
 
-    public Rectangle(int width, int length) {
-        this.width = width;
-        this.length = length;
-    }
+  public Rectangle(int height, int width) {
+    this.height = height;
+    this.width = width;
+  }
 
-    public int calculateArea() {
-        return length * width;
-    }
+  public int calculatePerimeter() {
+    return 2 * (height + width);
+  }
 
-    public int calculatePerimeter() {
-        return (length + width) * 2;
-    }
+  public int calculateArea() {
+    return height * width;
+  }
 }

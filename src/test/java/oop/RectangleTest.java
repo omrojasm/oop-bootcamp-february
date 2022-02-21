@@ -1,22 +1,28 @@
 package oop;
 
-import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class RectangleTest {
 
-    @Test
-    public void itShouldCalculateArea() {
-        var rectangle = new Rectangle(2, 4);
-        assertEquals(rectangle.calculateArea(), 8);
-    }
+  private Rectangle rectangle;
 
-    @Test
-    public void itShouldCalculatePerimeter() {
-        var rectangle = new Rectangle(2, 4);
-        assertEquals(rectangle.calculatePerimeter(), 12);
-    }
+  @BeforeMethod
+  public void setUp() {
+    rectangle = new Rectangle(3, 4);
+  }
+
+  @Test
+  public void itShouldReturnPerimeterRectanguleWhenGivenHeightAndWidth() {
+
+    assertEquals(rectangle.calculatePerimeter(), 14);
+  }
+
+  @Test
+  public void itShouldReturnTheAreaOfARectangleGivenTheHeightAndWidth() {
+    assertEquals(rectangle.calculateArea(), 12);
+  }
 
 }
