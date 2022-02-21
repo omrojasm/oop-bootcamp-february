@@ -2,8 +2,8 @@ package oop;
 
 public class Rectangle {
 
-    private int width;
-    private int length;
+    private final int width;
+    private final int length;
 
     public Rectangle(int width, int length) {
         this.width = width;
@@ -21,4 +21,6 @@ public class Rectangle {
     public int calculateArea() {
         return length * width;
     }
+
+    public int calculatePerimeter() { return (length + width) * 2;}
 }
