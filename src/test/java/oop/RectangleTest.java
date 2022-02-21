@@ -7,24 +7,22 @@ import org.testng.annotations.Test;
 
 public class RectangleTest {
 
-    private Rectangle rectangle;
+  private Rectangle rectangle;
 
-    @BeforeMethod
-    public void setUp() {
-        rectangle = new Rectangle(3, 4);
-    }
+  @BeforeMethod
+  public void setUp() {
+    rectangle = new Rectangle(3, 4);
+  }
 
-    @Test
-    public void itShouldReturnPerimeterRectanguleWhenGivenHeightAndWidth() {
+  @Test
+  public void itShouldReturnPerimeterRectanguleWhenGivenHeightAndWidth() {
 
-        var calculatedPerimeter = rectangle.calculatePerimeter();
-        assertEquals(calculatedPerimeter, 14);
-    }
+    assertEquals(rectangle.calculatePerimeter(), 14);
+  }
 
-    @Test
-    public void itShouldReturnTheAreaOfARectangleGivenTheHeightAndWidth() {
-        var calculatedArea = rectangle.calculateArea();
-        assertEquals(calculatedArea, 12);
-    }
+  @Test
+  public void itShouldReturnTheAreaOfARectangleGivenTheHeightAndWidth() {
+    assertEquals(rectangle.calculateArea(), 12);
+  }
 
 }
