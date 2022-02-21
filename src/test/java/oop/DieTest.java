@@ -21,6 +21,6 @@ public class DieTest {
 
     @Test
     public void itShouldCalculateTheChanceOfNotGettingA6InADie() {
-        assertEquals(die.calculateProbabilityOfNotGettingASide(), (double) 5 / 6);
+        assertEquals(die.calculateProbabilityOfNotGettingASide(), (double) 5 / 6, 0.001);
     }
 }
