@@ -10,17 +10,11 @@ public class Rectangle {
         this.length = length;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
     public int calculateArea() {
         return length * width;
     }
 
-    public int calculatePerimeter() { return (length + width) * 2;}
+    public int calculatePerimeter() {
+        return (length + width) * 2;
+    }
 }
