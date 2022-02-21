@@ -2,11 +2,17 @@ package oop;
 
 public class Die {
 
-  public double calculateProbabilityOfGettingASideOnADiceOf(int numberOfSides) {
-    return (double) 1/numberOfSides;
-  }
+    private final int numberOfSides;
 
-  public double calculateProbabilityOfNotGettingASideOnADiceOf(int numberOfSides) {
-    return 1 - calculateProbabilityOfGettingASideOnADiceOf(numberOfSides);
-  }
+    public Die(int numberOfSides) {
+        this.numberOfSides = numberOfSides;
+    }
+
+    public double calculateProbabilityOfGettingASide() {
+        return (double) 1 / numberOfSides;
+    }
+
+    public double calculateProbabilityOfNotGettingASide() {
+        return 1 - calculateProbabilityOfGettingASide();
+    }
 }
