@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class ChanceTest {
+public class DiceTest {
 
     private Dice dice;
 
@@ -21,6 +21,6 @@ public class ChanceTest {
 
     @Test
     public void itShouldReturnFiveSixthAsProbabilityOfNotRollingAnyNumber() {
-        assertEquals(dice.calculateProbabilityOfNotEvent(), 5.0 / 6.0);
+        assertEquals(dice.calculateProbabilityOfEventNotHappening(), 5.0 / 6.0);
     }
 }
