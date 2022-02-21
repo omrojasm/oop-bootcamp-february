@@ -13,7 +13,12 @@ public class RectangleTest {
         var rectangle = new Rectangle(width, length);
         assertEquals(rectangle.getWidth(), width);
         assertEquals(rectangle.getLength(), length);
+    }
 
+    @Test
+    public void itShouldCalculateArea() {
+        var rectangle = new Rectangle(2,4);
+        assertEquals(rectangle.calculateArea(), 8);
     }
 
 }
