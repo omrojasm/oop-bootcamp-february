@@ -2,5 +2,5 @@ package oop;
 
 public enum MeasureUnitType {
 
-    METER, FOOT, CENTIMETER
+    METER, FOOT, CENTIMETER, INCH
 }

@@ -23,4 +23,8 @@ public abstract class MeasureUnit {
     protected double getConversionRatioTo(MeasureUnitType targetType) {
         return Optional.ofNullable(targetMeasureRatios.get(targetType)).orElseThrow(() -> new UnknownConversionException(this.type, targetType));
     }
+
+    public double getMeasure() {
+        return measure;
+    }
 }
