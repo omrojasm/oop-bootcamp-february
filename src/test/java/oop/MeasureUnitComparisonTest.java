@@ -29,5 +29,4 @@ public class MeasureUnitComparisonTest {
         assertThrows(UnknownConversionException.class, () -> meters.isEquivalentTo(feet));
     }
 
-
 }
