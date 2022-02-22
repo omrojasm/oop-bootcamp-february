@@ -28,7 +28,7 @@ public class Chance {
         this.probability = (double) 1 / options;
     }
 
-    public double calculaOrOfChances(Chance chance) {
+    public double calculateOrOfChances(Chance chance) {
         return (getProbability() + chance.getProbability()) - calculateIndependentChances(chance);
     }
 }

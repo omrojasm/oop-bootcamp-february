@@ -42,7 +42,7 @@ public class ChanceTest {
         var die1 = new Chance(6);
         var die2 = new Chance(6);
 
-        var result = die1.calculaOrOfChances(
+        var result = die1.calculateOrOfChances(
             die2
         );
 
