@@ -5,22 +5,22 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class DiceTest {
+public class DiceRollTest {
 
-    private Dice dice;
+    private DiceRoll diceRoll;
 
     @BeforeTest
     public void setUp() {
-        dice = new Dice();
+        diceRoll = new DiceRoll();
     }
 
     @Test
     public void itShouldReturnOneSixthAsProbabilityOfRollingAnyNumber() {
-        assertEquals(dice.calculateProbabilityOfEvent(), 1.0 / 6.0);
+        assertEquals(diceRoll.calculateProbabilityOfEvent(), 1.0 / 6.0);
     }
 
     @Test
     public void itShouldReturnFiveSixthAsProbabilityOfNotRollingAnyNumber() {
-        assertEquals(dice.calculateProbabilityOfEventNotHappening(), 5.0 / 6.0);
+        assertEquals(diceRoll.calculateProbabilityOfEventNotHappening(), 5.0 / 6.0);
     }
 }
