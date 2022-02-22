@@ -8,7 +8,9 @@ public class Inch extends MeasureUnit {
         super(measure, INCH);
     }
 
-    public Inch add(Inch inchesToAdd) {
-        return new Inch(this.measure + inchesToAdd.getMeasure());
+    public Inch add(MeasureUnit unitToAdd) {
+        return new Inch(measure + convertFrom(unitToAdd));
     }
+
+
 }

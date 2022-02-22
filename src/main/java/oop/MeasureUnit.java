@@ -24,6 +24,11 @@ public abstract class MeasureUnit {
         return Optional.ofNullable(targetMeasureRatios.get(targetType)).orElseThrow(() -> new UnknownConversionException(this.type, targetType));
     }
 
+    protected double convertFrom(MeasureUnit otherUnit) {
+        return otherUnit.type == type ?
+            otherUnit.getMeasure() : otherUnit.getMeasure() * otherUnit.getConversionRatioTo(type);
+    }
+
     public double getMeasure() {
         return measure;
     }
