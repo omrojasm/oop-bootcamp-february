@@ -3,6 +3,7 @@ package oop;
 public class Die {
 
     private final int numberOfSides;
+    private final static int SURE_EVENT_PROBABILITY = 1;
 
     public Die(int numberOfSides) {
         this.numberOfSides = numberOfSides;
@@ -13,6 +14,6 @@ public class Die {
     }
 
     public double calculateProbabilityOfNotGettingASide() {
-        return 1 - calculateProbabilityOfGettingASide();
+        return SURE_EVENT_PROBABILITY - calculateProbabilityOfGettingASide();
     }
 }

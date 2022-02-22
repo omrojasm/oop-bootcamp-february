@@ -11,7 +11,7 @@ public class ChanceTest {
         var die1 = new Die(6);
         var die2 = new Die(6);
 
-        var result = new Chance().calculateSeveralChances(
+        var result = new Chance().calculateIndependentChances(
             die1.calculateProbabilityOfGettingASide(),
             die2.calculateProbabilityOfGettingASide()
         );
