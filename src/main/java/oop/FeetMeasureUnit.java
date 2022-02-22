@@ -1,14 +1,13 @@
 package oop;
 
-public class FeetMeasureUnit {
-    private static final double FEET_TO_METERS_RATIO = 0.3048;
-    private final double measure;
+import static oop.MeasureUnitType.FOOT;
+import static oop.MeasureUnitType.METER;
+
+public class FeetMeasureUnit extends MeasureUnit {
 
     public FeetMeasureUnit(double measure) {
-        this.measure = measure;
+        super(measure, FOOT);
+        targetMeasureRatios.put(METER, 0.3048);
     }
 
-    public double toValueInMeters() {
-        return measure * FEET_TO_METERS_RATIO;
-    }
 }
