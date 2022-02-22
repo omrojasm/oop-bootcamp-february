@@ -9,23 +9,23 @@ public class MeasureUnitComparisonTest {
 
     @Test
     public void itShouldCompareFeetAndMeters() {
-        var feet = new FeetMeasureUnit(1d);
-        var meters = new MeterMeasureUnit(0.3048);
+        var feet = new Foot(1d);
+        var meters = new Meter(0.3048);
 
         assertTrue(feet.isEquivalentTo(meters));
     }
 
     @Test
     public void itShouldCompareMetersAndCentimeters() {
-        var meters = new MeterMeasureUnit(2d);
-        var centimeters = new CentimeterMeasureUnit(200d);
+        var meters = new Meter(2d);
+        var centimeters = new Centimeter(200d);
         assertTrue(meters.isEquivalentTo(centimeters));
     }
 
     @Test
     public void itShouldThrowAnExceptionWhenUnableToRetrieveRatio() {
-        var meters = new MeterMeasureUnit(3d);
-        var feet = new FeetMeasureUnit(3d);
+        var meters = new Meter(3d);
+        var feet = new Foot(3d);
         assertThrows(UnknownConversionException.class, () -> meters.isEquivalentTo(feet));
     }
 

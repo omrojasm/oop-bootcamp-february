@@ -6,9 +6,9 @@ import static org.testng.Assert.assertEquals;
 
 public class MeasureUnitOperationTest {
     @Test
-    public void itShouldAddInches() {
-        var inches = new InchMeasureUnit(2d);
-        var inchesToAdd = new InchMeasureUnit(2d);
+    public void itShouldAddInchesToInches() {
+        var inches = new Inch(2d);
+        var inchesToAdd = new Inch(2d);
 
         assertEquals(inches.add(inchesToAdd).getMeasure(), 4, 0.0001);
     }

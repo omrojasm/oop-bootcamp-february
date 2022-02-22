@@ -2,10 +2,10 @@ package oop;
 
 import static oop.MeasureUnitType.CENTIMETER;
 
-public class MeterMeasureUnit extends MeasureUnit {
+public class Meter extends MeasureUnit {
 
 
-    public MeterMeasureUnit(double measure) {
+    public Meter(double measure) {
         super(measure, MeasureUnitType.METER);
         targetMeasureRatios.put(CENTIMETER, 100d);
     }

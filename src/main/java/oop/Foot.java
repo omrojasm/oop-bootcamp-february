@@ -3,9 +3,9 @@ package oop;
 import static oop.MeasureUnitType.FOOT;
 import static oop.MeasureUnitType.METER;
 
-public class FeetMeasureUnit extends MeasureUnit {
+public class Foot extends MeasureUnit {
 
-    public FeetMeasureUnit(double measure) {
+    public Foot(double measure) {
         super(measure, FOOT);
         targetMeasureRatios.put(METER, 0.3048);
     }
