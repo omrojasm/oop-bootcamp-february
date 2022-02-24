@@ -8,13 +8,15 @@ import static org.mockito.Mockito.verify;
 
 public class ParkingOwnerTest {
 
+    private final Car car = Mockito.mock(Car.class);
+
     @Test
     public void itShouldBeNotifiedWhenParkingLotReachesCapacityThreshold() {
         final var parkingOwner = Mockito.spy(new ParkingOwner());
         final var parkingLot = new ParkingLot(1, 5, 2);
 
         parkingLot.addObserver(parkingOwner);
-        parkingLot.fillSpot();
+        parkingLot.fillSpot(car);
 
         verify(parkingOwner).buyMoreLand();
     }
@@ -25,7 +27,7 @@ public class ParkingOwnerTest {
         final var parkingLot = new ParkingLot(1, 5, 5);
 
         parkingLot.addObserver(parkingOwner);
-        parkingLot.fillSpot();
+        parkingLot.fillSpot(car);
 
         verify(parkingOwner, times(0)).buyMoreLand();
     }

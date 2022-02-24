@@ -23,7 +23,7 @@ public class ParkingLotTest {
     @Test
     public void itShouldDecreaseTheAvailableSpotsInOneUnit() {
         var parkingLot = new ParkingLot(1,10,5);
-        parkingLot.fillSpot();
+        parkingLot.fillSpot(new Car());
         assertEquals(parkingLot.getAvailabilityPercentage(), 0.4d, DELTA);
     }
 

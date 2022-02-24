@@ -1,11 +1,12 @@
 package oop.parking;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ParkingAssistant {
 
     private final List<ParkingLot> parkingLots;
+    private final List<ParkingAssistant> subAssistants = new ArrayList<>();
 
     public ParkingAssistant(List<ParkingLot> parkingLots) {
         this.parkingLots = parkingLots;
@@ -15,8 +16,7 @@ public class ParkingAssistant {
         return parkingLots.stream()
             .filter(this::hasCapacity)
             .findFirst().map(parkingLot -> {
-                car.park();
-                parkingLot.fillSpot();
+                parkingLot.fillSpot(car);
                 return parkingLot.getId();
             }).orElse(-1);
     }
@@ -25,4 +25,7 @@ public class ParkingAssistant {
         return parkingLot.getAvailabilityPercentage() >= 0.2;
     }
 
+    public void hireAssistant(ParkingAssistant newAssistant) {
+        subAssistants.add(newAssistant);
+    }
 }

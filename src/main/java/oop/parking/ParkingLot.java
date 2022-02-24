@@ -23,7 +23,8 @@ public class ParkingLot {
         return (double) freeSpots / totalCapacity;
     }
 
-    public void fillSpot() {
+    public void fillSpot(Car car) {
+        car.park();
         freeSpots -= 1;
         if(getAvailabilityPercentage() < 0.25) {
             observers.forEach(parkingLotObserver -> parkingLotObserver.update(id));
