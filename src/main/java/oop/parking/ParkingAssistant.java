@@ -14,15 +14,11 @@ public class ParkingAssistant {
 
     public int park(Car car) {
         return parkingLots.stream()
-            .filter(this::hasCapacity)
+            .filter(ParkingLot::hasCapacity)
             .findFirst().map(parkingLot -> {
                 parkingLot.fillSpot(car);
                 return parkingLot.getId();
             }).orElse(-1);
-    }
-
-    private boolean hasCapacity(ParkingLot parkingLot) {
-        return parkingLot.getAvailabilityPercentage() >= 0.2;
     }
 
     public void hireAssistant(ParkingAssistant newAssistant) {

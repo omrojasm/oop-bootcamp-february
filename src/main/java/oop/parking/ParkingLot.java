@@ -19,14 +19,14 @@ public class ParkingLot {
         this.observers = new ArrayList<>();
     }
 
-    public double getAvailabilityPercentage() {
+    public double calculateAvailabilityPercentage() {
         return (double) freeSpots / totalCapacity;
     }
 
     public void fillSpot(Car car) {
         car.park();
         freeSpots -= 1;
-        if(getAvailabilityPercentage() < 0.25) {
+        if(calculateAvailabilityPercentage() < 0.25) {
             observers.forEach(parkingLotObserver -> parkingLotObserver.update(id));
         }
     }
@@ -37,5 +37,9 @@ public class ParkingLot {
 
     public void addObserver(ParkingLotObserver observer) {
         observers.add(observer);
+    }
+
+    public boolean hasCapacity() {
+        return calculateAvailabilityPercentage() >= 0.2;
     }
 }
