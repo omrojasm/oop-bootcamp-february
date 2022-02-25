@@ -1,7 +1,7 @@
 package oop.greet;
 
 public class Greeter {
-    public static String greet(String name) {
+    public  String greet(String name) {
         return "Hello " + formatName(name);
     }
 

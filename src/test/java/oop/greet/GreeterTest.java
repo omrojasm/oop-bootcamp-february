@@ -6,19 +6,23 @@ import static org.testng.Assert.assertEquals;
 
 public class GreeterTest {
 
+
     @Test
     public void itShouldGreetWithTheName() {
-        assertEquals(Greeter.greet("Oscar"), "Hello Oscar");
+        var greeter = new Greeter();
+        assertEquals(greeter.greet("Oscar"), "Hello Oscar");
     }
 
 
     @Test
     public void itShouldTrimTheName() {
-        assertEquals(Greeter.greet(" Oscar "), "Hello Oscar");
+        var greeter = new Greeter();
+        assertEquals(greeter.greet(" Oscar "), "Hello Oscar");
     }
 
     @Test
     public void itShouldCapitalizeFirstLetterOfTheName() {
-        assertEquals(Greeter.greet("oscar"), "Hello Oscar");
+        var greeter = new Greeter();
+        assertEquals(greeter.greet("oscar"), "Hello Oscar");
     }
 }
