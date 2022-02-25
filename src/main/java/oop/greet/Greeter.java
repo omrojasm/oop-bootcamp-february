@@ -1,26 +1,26 @@
 package oop.greet;
 
-import java.time.LocalTime;
+import java.time.Clock;
+import java.time.ZoneId;
 
 public class Greeter {
 
-    private LocalTime timeOfTheDay;
+    private final Clock clock;
 
-    public Greeter() {
+    public Greeter(Clock clock) {
+        this.clock = clock;
     }
 
-    public Greeter(LocalTime timeOfTheDay) {
-        this.timeOfTheDay = timeOfTheDay;
-    }
-
-    public  String greet(String name) {
-        var greetingMessage = timeOfTheDay != null ? "Good morning " : "Hello ";
-        return greetingMessage + formatName(name);
+    public String greet(String name) {
+        int currentHour = clock.instant().atZone(ZoneId.systemDefault()).getHour();
+        if(currentHour >= 6 && currentHour <= 12) {
+            return "Good morning " + formatName(name);
+        }
+        return "Hello " + formatName(name);
     }
 
     private static String formatName(String name) {
         var trimmedName = name.trim();
-
         return trimmedName.substring(0,1).toUpperCase().concat(trimmedName.substring(1));
     }
 }
