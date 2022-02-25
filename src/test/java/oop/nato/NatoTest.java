@@ -6,15 +6,17 @@ import static org.testng.Assert.*;
 
 public class NatoTest {
     @Test
-    public void itShouldEncodeHello() {
-        assertEquals(Nato.encode("hello"), "hotel-echo-lima-lima-oscar");
+    public void itShouldEncodeOneCharacter() {
+        assertEquals(Nato.encode("h"), "hotel");
     }
+
     @Test
-    public void itShouldDecodeToHello() {
-        assertEquals(Nato.decode("hotel-echo-lima-lima-oscar"), "hello");
+    public void itShouldEncodeSeveralCharacter() {
+        assertEquals(Nato.encode("hola"), "hotel-oscar-lima-alpha");
     }
+
     @Test
-    public void itShouldParseWhiteSpaceAsNull() {
-        assertEquals(Nato.encode("Buenos dias"), "bravo-uniform-echo-november-oscar-sierra-null-delta-india-alpha-sierra");
+    public void itShouldEncodeWhiteSpaceAsNull() {
+        assertEquals(Nato.encode("h ola"), "hotel-null-oscar-lima-alpha");
     }
 }
