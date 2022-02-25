@@ -19,4 +19,9 @@ public class NatoTest {
     public void itShouldEncodeWhiteSpaceAsNull() {
         assertEquals(Nato.encode("h ola"), "hotel-null-oscar-lima-alpha");
     }
+
+    @Test
+    public void itShouldDecodeOneWord() {
+        assertEquals(Nato.decode("hotel"), "h");
+    }
 }

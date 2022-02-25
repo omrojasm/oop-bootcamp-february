@@ -56,4 +56,7 @@ public class Nato {
         Map.entry("0", "zero"),
         Map.entry(" ", "null"));
 
+    public static String decode(String encodedMessage) {
+        return "";
+    }
 }
