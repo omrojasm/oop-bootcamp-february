@@ -10,7 +10,7 @@ public class Stats {
         this.nums  = nums;
     }
 
-    public int extractMinimum() throws EmptyArrayException {
-        return Arrays.stream(nums).min().orElseThrow(() -> new EmptyArrayException());
+    public int extractMinimum() {
+        return Arrays.stream(nums).min().orElseThrow(EmptyArrayException::new);
     }
 }
