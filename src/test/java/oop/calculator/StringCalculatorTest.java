@@ -17,7 +17,12 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void itShouldReturnSumOfInputValues() {
+    public void itShouldReturnSumOfWithCommaSeparatedInputValues() {
         assertEquals(StringCalculator.add("1,2"),3);
+    }
+
+    @Test
+    public void itShouldReturnSumOfWithNewLineSeparatedInputValues() {
+        assertEquals(StringCalculator.add("1\n2"),3);
     }
 }
