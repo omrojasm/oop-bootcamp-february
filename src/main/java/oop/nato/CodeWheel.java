@@ -40,5 +40,46 @@ public class CodeWheel {
         Map.entry("8", "eight"),
         Map.entry("9", "nine"),
         Map.entry("0", "zero"),
-        Map.entry(" ", "null"));
+        Map.entry(" ", "null")
+    );
+
+    public static final Map<String,String> DECODE_MAP = Map.ofEntries(
+        Map.entry("alpha", "a"),
+        Map.entry("bravo", "b"),
+        Map.entry("charlie", "c"),
+        Map.entry("delta", "d"),
+        Map.entry("echo", "e"),
+        Map.entry("foxtrot", "f"),
+        Map.entry("golf", "g"),
+        Map.entry("hotel", "h"),
+        Map.entry("india", "i"),
+        Map.entry("juliett", "j"),
+        Map.entry("kilo", "k"),
+        Map.entry("lima", "l"),
+        Map.entry("mike", "m"),
+        Map.entry("november", "n"),
+        Map.entry("oscar", "o"),
+        Map.entry("papa", "p"),
+        Map.entry("quebec", "q"),
+        Map.entry("romeo", "r"),
+        Map.entry("sierra", "s"),
+        Map.entry("tango", "t"),
+        Map.entry("uniform", "u"),
+        Map.entry("victor", "v"),
+        Map.entry("whiskey", "w"),
+        Map.entry("xray", "x"),
+        Map.entry("yankee", "y"),
+        Map.entry("zulu", "z"),
+        Map.entry("one", "1"),
+        Map.entry("two", "2"),
+        Map.entry("three", "3"),
+        Map.entry("four", "4"),
+        Map.entry("five", "5"),
+        Map.entry("six", "6"),
+        Map.entry("seven", "7"),
+        Map.entry("eight", "8"),
+        Map.entry("nine", "9"),
+        Map.entry("zero", "0"),
+        Map.entry("null", " ")
+    );
 }

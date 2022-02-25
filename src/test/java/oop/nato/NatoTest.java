@@ -24,4 +24,9 @@ public class NatoTest {
     public void itShouldDecodeOneWord() {
         assertEquals(Nato.decode("hotel"), "h");
     }
+
+    @Test
+    public void itShouldDecodeSeveralWords() {
+        assertEquals(Nato.decode("hotel-echo-charlie-tango-oscar-romeo"), "hector");
+    }
 }
