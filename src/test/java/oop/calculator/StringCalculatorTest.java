@@ -25,4 +25,9 @@ public class StringCalculatorTest {
     public void itShouldReturnSumOfWithNewLineSeparatedInputValues() {
         assertEquals(StringCalculator.add("1\n2"),3);
     }
+
+    @Test
+    public void itShouldSumOfWithMultiDelimitedValues() {
+        assertEquals(StringCalculator.add("1\n2,3\n4"),10);
+    }
 }
